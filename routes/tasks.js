@@ -285,10 +285,7 @@ module.exports = function (router) {
                 return existingTask;
             });
 
-            return res.status(200).json({
-                message: "Task deleted",
-                data: task
-            });
+            return res.status(204).send();
 
         } catch (error) {
             if (error.statusCode) {
